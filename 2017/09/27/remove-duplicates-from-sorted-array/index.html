@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Question: 不使用额外内存时在有序列表中去重👉LeetCode链接👈Given a sorted array, remove the duplicates in place such that each element appear only once and return the new length. Do not allocate extra space for another">
+<meta property="og:type" content="article">
+<meta property="og:title" content="不使用额外内存时在有序列表中去重">
+<meta property="og:url" content="https://raysonmeng.github.io.com/2017/09/27/remove-duplicates-from-sorted-array/index.html">
+<meta property="og:site_name" content="航海日志">
+<meta property="og:description" content="Question: 不使用额外内存时在有序列表中去重👉LeetCode链接👈Given a sorted array, remove the duplicates in place such that each element appear only once and return the new length. Do not allocate extra space for another">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-05-12T09:43:13.548Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="不使用额外内存时在有序列表中去重">
+<meta name="twitter:description" content="Question: 不使用额外内存时在有序列表中去重👉LeetCode链接👈Given a sorted array, remove the duplicates in place such that each element appear only once and return the new length. Do not allocate extra space for another">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>不使用额外内存时在有序列表中去重</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/categories/memo/">Memo</a></li>
+         
+          <li><a href="/categories/leetcode/">Leetcode</a></li>
+         
+          <li><a href="/resume/">Resume</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2017/10/18/remove-element-without-extra-space/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/2017/09/26/valid-parentheses/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://raysonmeng.github.io.com/2017/09/27/remove-duplicates-from-sorted-array/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://raysonmeng.github.io.com/2017/09/27/remove-duplicates-from-sorted-array/&text=不使用额外内存时在有序列表中去重"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://raysonmeng.github.io.com/2017/09/27/remove-duplicates-from-sorted-array/&title=不使用额外内存时在有序列表中去重"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://raysonmeng.github.io.com/2017/09/27/remove-duplicates-from-sorted-array/&is_video=false&description=不使用额外内存时在有序列表中去重"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=不使用额外内存时在有序列表中去重&body=Check out this article: https://raysonmeng.github.io.com/2017/09/27/remove-duplicates-from-sorted-array/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://raysonmeng.github.io.com/2017/09/27/remove-duplicates-from-sorted-array/&title=不使用额外内存时在有序列表中去重"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://raysonmeng.github.io.com/2017/09/27/remove-duplicates-from-sorted-array/&title=不使用额外内存时在有序列表中去重"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://raysonmeng.github.io.com/2017/09/27/remove-duplicates-from-sorted-array/&title=不使用额外内存时在有序列表中去重"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://raysonmeng.github.io.com/2017/09/27/remove-duplicates-from-sorted-array/&title=不使用额外内存时在有序列表中去重"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://raysonmeng.github.io.com/2017/09/27/remove-duplicates-from-sorted-array/&name=不使用额外内存时在有序列表中去重&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Question-不使用额外内存时在有序列表中去重"><span class="toc-number">1.</span> <span class="toc-text">Question: 不使用额外内存时在有序列表中去重</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#👉LeetCode链接👈"><span class="toc-number">1.1.</span> <span class="toc-text">👉LeetCode链接👈</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Example"><span class="toc-number">2.</span> <span class="toc-text">Example</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Answer"><span class="toc-number">3.</span> <span class="toc-text">Answer</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Thinking"><span class="toc-number">4.</span> <span class="toc-text">Thinking</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Why"><span class="toc-number">5.</span> <span class="toc-text">Why</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        不使用额外内存时在有序列表中去重
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">航海日志</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2017-09-27T15:23:12.000Z" itemprop="datePublished">2017-09-27</time>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="Question-不使用额外内存时在有序列表中去重"><a href="#Question-不使用额外内存时在有序列表中去重" class="headerlink" title="Question: 不使用额外内存时在有序列表中去重"></a>Question: 不使用额外内存时在有序列表中去重</h2><h3 id="👉LeetCode链接👈"><a href="#👉LeetCode链接👈" class="headerlink" title="👉LeetCode链接👈"></a><a href="https://leetcode.com/problems/remove-duplicates-from-sorted-array/" target="_blank" rel="noopener">👉<u>LeetCode链接</u>👈</a></h3><p>Given a sorted array, remove the duplicates in place such that each element appear only <em>once</em> and return the new length.</p>
+<p><code>Do not allocate extra space for another array, you must do this in place with constant memory.</code></p>
+<blockquote>
+<p>给定一个有序数组，删除重复的元素，保证每个元素只出现一次，并且返回新的数组长度</p>
+<p><code>注意！</code> <code>注意！</code> <code>注意！</code></p>
+<p>问题没有这么简单，不允许给另外一个列表使用额外的内存空间，只能在常量内存中操作</p>
+</blockquote>
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Given input array nums = [1,1,2],</span><br><span class="line"></span><br><span class="line">Your function should return length = 2,</span><br></pre></td></tr></table></figure>
+<h2 id="Answer"><a href="#Answer" class="headerlink" title="Answer"></a>Answer</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">removeDuplicates</span><span class="params">(A)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> A:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">    new_tail = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, len(A)):</span><br><span class="line">        print(A)</span><br><span class="line">        <span class="keyword">if</span> A[i] != A[new_tail]:</span><br><span class="line">            new_tail += <span class="number">1</span></span><br><span class="line">            A[new_tail] = A[i]</span><br><span class="line">    <span class="keyword">return</span> new_tail + <span class="number">1</span></span><br></pre></td></tr></table></figure>
+<h2 id="Thinking"><a href="#Thinking" class="headerlink" title="Thinking"></a>Thinking</h2><p>先定义一个新的索引，值为 <code>0</code>， <code>new_tail</code> 用来存储当前最后一个不重复的数字是多少，并且这个索引页代表了有多少个不重复的数字了。从索引为 1 的位置，也就是第二个元素开始，与 <code>new_tail</code> 位置的元素比较相同的话，不做任何操作，继续向下取下一个值，不同的话，将 <code>new_tail</code> 这个索引加一，将最新的不重复的数字存入到新的 <code>new_tail</code> 的位置上，然后继续往下判断。所以 <code>new_tail</code> 位置上的数据，始终是与 <code>[0:new_tail]</code> 之间的数据不重复的数据并且也是循环到最新的位置时，遇到的最后一个不重复的数据由于 <code>new_tail</code> 初始值是 0，所以 <code>new_tail + 1</code> 也就是当前所有不重复数据的总和</p>
+<h2 id="Why"><a href="#Why" class="headerlink" title="Why"></a>Why</h2><p><strong>刚开始想得太简单了，寻思着直接返回 <code>len(set(A))</code> 不就是返回去重后的长度了么。可是在 <code>set</code> 的 <code>__init__</code> 方法中发现了这么一句话  <code>set() -&gt; new empty set object</code> 才知道使用set方法时是创建了一个新的 <code>set object</code> 也就意味着使用了新的内存空间 </strong></p>
+
+  </div>
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/categories/memo/">Memo</a></li>
+         
+          <li><a href="/categories/leetcode/">Leetcode</a></li>
+         
+          <li><a href="/resume/">Resume</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Question-不使用额外内存时在有序列表中去重"><span class="toc-number">1.</span> <span class="toc-text">Question: 不使用额外内存时在有序列表中去重</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#👉LeetCode链接👈"><span class="toc-number">1.1.</span> <span class="toc-text">👉LeetCode链接👈</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Example"><span class="toc-number">2.</span> <span class="toc-text">Example</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Answer"><span class="toc-number">3.</span> <span class="toc-text">Answer</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Thinking"><span class="toc-number">4.</span> <span class="toc-text">Thinking</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Why"><span class="toc-number">5.</span> <span class="toc-text">Why</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://raysonmeng.github.io.com/2017/09/27/remove-duplicates-from-sorted-array/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://raysonmeng.github.io.com/2017/09/27/remove-duplicates-from-sorted-array/&text=不使用额外内存时在有序列表中去重"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://raysonmeng.github.io.com/2017/09/27/remove-duplicates-from-sorted-array/&title=不使用额外内存时在有序列表中去重"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://raysonmeng.github.io.com/2017/09/27/remove-duplicates-from-sorted-array/&is_video=false&description=不使用额外内存时在有序列表中去重"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=不使用额外内存时在有序列表中去重&body=Check out this article: https://raysonmeng.github.io.com/2017/09/27/remove-duplicates-from-sorted-array/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://raysonmeng.github.io.com/2017/09/27/remove-duplicates-from-sorted-array/&title=不使用额外内存时在有序列表中去重"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://raysonmeng.github.io.com/2017/09/27/remove-duplicates-from-sorted-array/&title=不使用额外内存时在有序列表中去重"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://raysonmeng.github.io.com/2017/09/27/remove-duplicates-from-sorted-array/&title=不使用额外内存时在有序列表中去重"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://raysonmeng.github.io.com/2017/09/27/remove-duplicates-from-sorted-array/&title=不使用额外内存时在有序列表中去重"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://raysonmeng.github.io.com/2017/09/27/remove-duplicates-from-sorted-array/&name=不使用额外内存时在有序列表中去重&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2018 Rayson Meng
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/categories/memo/">Memo</a></li>
+         
+          <li><a href="/categories/leetcode/">Leetcode</a></li>
+         
+          <li><a href="/resume/">Resume</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+

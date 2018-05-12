@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Question: 给定列表中数字相加求目标和👉LeetCode链接👈Given an array of integers, return indices of the two numbers such that they add up to a specific target. You may assume that each input would have exactly one sol">
+<meta property="og:type" content="article">
+<meta property="og:title" content="给定列表中数字相加求目标和">
+<meta property="og:url" content="https://raysonmeng.github.io.com/2017/09/19/two-sum/index.html">
+<meta property="og:site_name" content="航海日志">
+<meta property="og:description" content="Question: 给定列表中数字相加求目标和👉LeetCode链接👈Given an array of integers, return indices of the two numbers such that they add up to a specific target. You may assume that each input would have exactly one sol">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-05-12T09:43:13.548Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="给定列表中数字相加求目标和">
+<meta name="twitter:description" content="Question: 给定列表中数字相加求目标和👉LeetCode链接👈Given an array of integers, return indices of the two numbers such that they add up to a specific target. You may assume that each input would have exactly one sol">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>给定列表中数字相加求目标和</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/categories/memo/">Memo</a></li>
+         
+          <li><a href="/categories/leetcode/">Leetcode</a></li>
+         
+          <li><a href="/resume/">Resume</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2017/09/20/reverse-integer/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://raysonmeng.github.io.com/2017/09/19/two-sum/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://raysonmeng.github.io.com/2017/09/19/two-sum/&text=给定列表中数字相加求目标和"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://raysonmeng.github.io.com/2017/09/19/two-sum/&title=给定列表中数字相加求目标和"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://raysonmeng.github.io.com/2017/09/19/two-sum/&is_video=false&description=给定列表中数字相加求目标和"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=给定列表中数字相加求目标和&body=Check out this article: https://raysonmeng.github.io.com/2017/09/19/two-sum/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://raysonmeng.github.io.com/2017/09/19/two-sum/&title=给定列表中数字相加求目标和"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://raysonmeng.github.io.com/2017/09/19/two-sum/&title=给定列表中数字相加求目标和"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://raysonmeng.github.io.com/2017/09/19/two-sum/&title=给定列表中数字相加求目标和"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://raysonmeng.github.io.com/2017/09/19/two-sum/&title=给定列表中数字相加求目标和"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://raysonmeng.github.io.com/2017/09/19/two-sum/&name=给定列表中数字相加求目标和&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Question-给定列表中数字相加求目标和"><span class="toc-number">1.</span> <span class="toc-text">Question: 给定列表中数字相加求目标和</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#👉LeetCode链接👈"><span class="toc-number">1.1.</span> <span class="toc-text">👉LeetCode链接👈</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Example"><span class="toc-number">2.</span> <span class="toc-text">Example</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Answer"><span class="toc-number">3.</span> <span class="toc-text">Answer</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Finally"><span class="toc-number">4.</span> <span class="toc-text">Finally</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        给定列表中数字相加求目标和
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">航海日志</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2017-09-19T14:32:37.000Z" itemprop="datePublished">2017-09-19</time>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="Question-给定列表中数字相加求目标和"><a href="#Question-给定列表中数字相加求目标和" class="headerlink" title="Question: 给定列表中数字相加求目标和"></a>Question: 给定列表中数字相加求目标和</h2><h3 id="👉LeetCode链接👈"><a href="#👉LeetCode链接👈" class="headerlink" title="👉LeetCode链接👈"></a><a href="https://leetcode.com/problems/two-sum" target="_blank" rel="noopener">👉<u>LeetCode链接</u>👈</a></h3><p>Given an array of integers, return <strong>indices</strong> of the two numbers such that they add up to a specific target.</p>
+<p>You may assume that each input would have <strong>exactly</strong> one solution, and you may not use the <em>same</em> element twice.</p>
+<blockquote>
+<p>给定一个 int 类型的数组，返回两个数字相加等于一个指定的目标值时的两个指针。</p>
+<p>每个输入只有一个答案，不能使用一个元素两次（不能自己与自己相加等于目标值）。</p>
+</blockquote>
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Given nums = [2, 7, 11, 15], target = 9,</span><br><span class="line"></span><br><span class="line">Because nums[0] + nums[1] = 2 + 7 = 9,</span><br><span class="line">return [0, 1].</span><br></pre></td></tr></table></figure>
+<h2 id="Answer"><a href="#Answer" class="headerlink" title="Answer"></a>Answer</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">two_sum</span><span class="params">(nums, target)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    :type nums: List[int]</span></span><br><span class="line"><span class="string">    :type target: int</span></span><br><span class="line"><span class="string">    :rtype: List[int]</span></span><br><span class="line"><span class="string">    O(n*n-n)</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="keyword">for</span> i, v <span class="keyword">in</span> enumerate(nums):</span><br><span class="line">        diff = target - v</span><br><span class="line">        <span class="keyword">if</span> diff <span class="keyword">in</span> nums:</span><br><span class="line">            <span class="keyword">if</span> diff == v:</span><br><span class="line">            <span class="keyword">if</span> nums.count(diff) == <span class="number">1</span>:</span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                v_index = nums.index(v)</span><br><span class="line">                nums.remove(v)</span><br><span class="line">                diff_index = nums.index(diff)+<span class="number">1</span></span><br><span class="line">                    <span class="keyword">return</span> [v_index, diff_index]</span><br><span class="line">        <span class="keyword">return</span> [nums.index(v), nums.index(diff)]</span><br></pre></td></tr></table></figure>
+<h2 id="Finally"><a href="#Finally" class="headerlink" title="Finally"></a>Finally</h2><p><strong>之前考虑得太简单了，[3, 3] 6 | [3, 2, 4] 6 | [3, 2, 3] 6 这些情况都没有考虑到</strong></p>
+
+  </div>
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/categories/memo/">Memo</a></li>
+         
+          <li><a href="/categories/leetcode/">Leetcode</a></li>
+         
+          <li><a href="/resume/">Resume</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Question-给定列表中数字相加求目标和"><span class="toc-number">1.</span> <span class="toc-text">Question: 给定列表中数字相加求目标和</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#👉LeetCode链接👈"><span class="toc-number">1.1.</span> <span class="toc-text">👉LeetCode链接👈</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Example"><span class="toc-number">2.</span> <span class="toc-text">Example</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Answer"><span class="toc-number">3.</span> <span class="toc-text">Answer</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Finally"><span class="toc-number">4.</span> <span class="toc-text">Finally</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://raysonmeng.github.io.com/2017/09/19/two-sum/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://raysonmeng.github.io.com/2017/09/19/two-sum/&text=给定列表中数字相加求目标和"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://raysonmeng.github.io.com/2017/09/19/two-sum/&title=给定列表中数字相加求目标和"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://raysonmeng.github.io.com/2017/09/19/two-sum/&is_video=false&description=给定列表中数字相加求目标和"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=给定列表中数字相加求目标和&body=Check out this article: https://raysonmeng.github.io.com/2017/09/19/two-sum/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://raysonmeng.github.io.com/2017/09/19/two-sum/&title=给定列表中数字相加求目标和"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://raysonmeng.github.io.com/2017/09/19/two-sum/&title=给定列表中数字相加求目标和"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://raysonmeng.github.io.com/2017/09/19/two-sum/&title=给定列表中数字相加求目标和"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://raysonmeng.github.io.com/2017/09/19/two-sum/&title=给定列表中数字相加求目标和"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://raysonmeng.github.io.com/2017/09/19/two-sum/&name=给定列表中数字相加求目标和&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2018 Rayson Meng
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/categories/memo/">Memo</a></li>
+         
+          <li><a href="/categories/leetcode/">Leetcode</a></li>
+         
+          <li><a href="/resume/">Resume</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
