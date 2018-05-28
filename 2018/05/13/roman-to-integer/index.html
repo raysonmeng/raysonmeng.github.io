@@ -113,6 +113,8 @@
         
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
     
     <h1 class="posttitle" itemprop="name headline">
         罗马数字转数字
@@ -175,13 +177,8 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">roman_num_str_to_int</span><span class="params">(roman_num_str)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    :type roman_num_str: str</span></span><br><span class="line"><span class="string">    :rtype: int</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    normal = &#123;</span><br><span class="line">        <span class="string">'I'</span>: <span class="number">1</span>,</span><br><span class="line">        <span class="string">'V'</span>: <span class="number">5</span>,</span><br><span class="line">        <span class="string">'X'</span>: <span class="number">10</span>,</span><br><span class="line">        <span class="string">'L'</span>: <span class="number">50</span>,</span><br><span class="line">        <span class="string">'C'</span>: <span class="number">100</span>,</span><br><span class="line">        <span class="string">'D'</span>: <span class="number">500</span>,</span><br><span class="line">        <span class="string">'M'</span>: <span class="number">1000</span>,</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    result = <span class="number">0</span></span><br><span class="line">    len_s = len(s)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> index <span class="keyword">in</span> xrange(len_s):</span><br><span class="line">        current_roman = s[index]</span><br><span class="line">        result += normal[current_roman]</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> index &lt; len_s<span class="number">-1</span>:</span><br><span class="line">            next_roman = s[index+<span class="number">1</span>]</span><br><span class="line">            <span class="keyword">if</span> normal[current_roman] &lt; normal[next_roman]:</span><br><span class="line">                result -= normal[current_roman] * <span class="number">2</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> result</span><br></pre></td></tr></table></figure>
 
   </div>
+  <div id="comment"></div>
 </article>
-
-    <div class="blog-post-comments">
-        <div id="disqus_thread">
-            <noscript>加载评论需要在浏览器启用 JavaScript 脚本支持。</noscript>
-        </div>
-    </div>
 
 
 
@@ -274,18 +271,6 @@
 <!-- Baidu Analytics -->
 
 <!-- Disqus Comments -->
-
-    <script type="text/javascript">
-        var disqus_shortname = 'blog-3s8e2kcwx3';
-
-        (function(){
-            var dsq = document.createElement('script');
-            dsq.type = 'text/javascript';
-            dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        }());
-    </script>
 
 
 <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
