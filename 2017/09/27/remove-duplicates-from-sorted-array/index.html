@@ -112,8 +112,10 @@
         
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header>
+
     <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
     <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+
     
     <h1 class="posttitle" itemprop="name headline">
         不使用额外内存时在有序列表中去重
@@ -151,7 +153,20 @@
 <h2 id="Why"><a href="#Why" class="headerlink" title="Why"></a>Why</h2><p><strong>刚开始想得太简单了，寻思着直接返回 <code>len(set(A))</code> 不就是返回去重后的长度了么。可是在 <code>set</code> 的 <code>__init__</code> 方法中发现了这么一句话  <code>set() -&gt; new empty set object</code> 才知道使用set方法时是创建了一个新的 <code>set object</code> 也就意味着使用了新的内存空间 </strong></p>
 
   </div>
-  <div id="comment"></div>
+
+  <div class="comment"></div>
+  <script>
+      new Valine({
+          // AV 对象来自上面引入av-min.js(老司机们不要开车➳♡゛扎心了老铁)
+          av: AV, 
+          el: '.comment', // 
+          notify: true, // 邮件提醒!!!
+          verify: true, // 验证码
+          app_id: 'olUA8FeuzQ669s3yMoep1gxp-gzGzoHsz', // 这里填写上面得到的APP ID
+          app_key: 'HQ7adeotKd6scuo3AbfI7Ka0', // 这里填写上面得到的APP KEY
+          placeholder: 'Welcome here.' // [v1.0.7 new]留言框占位提示文字
+      });
+  </script>
 </article>
 
 
@@ -246,6 +261,4 @@
 
 <!-- Disqus Comments -->
 
-
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 

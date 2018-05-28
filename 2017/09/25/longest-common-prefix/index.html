@@ -112,8 +112,10 @@
         
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header>
+
     <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
     <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+
     
     <h1 class="posttitle" itemprop="name headline">
         最长公共前缀
@@ -149,7 +151,20 @@
 <p>我的邮箱：<a href="mailto:rayson951005@gmail.com" target="_blank" rel="noopener">rayson951005@gmail.com</a></p>
 
   </div>
-  <div id="comment"></div>
+
+  <div class="comment"></div>
+  <script>
+      new Valine({
+          // AV 对象来自上面引入av-min.js(老司机们不要开车➳♡゛扎心了老铁)
+          av: AV, 
+          el: '.comment', // 
+          notify: true, // 邮件提醒!!!
+          verify: true, // 验证码
+          app_id: 'olUA8FeuzQ669s3yMoep1gxp-gzGzoHsz', // 这里填写上面得到的APP ID
+          app_key: 'HQ7adeotKd6scuo3AbfI7Ka0', // 这里填写上面得到的APP KEY
+          placeholder: 'Welcome here.' // [v1.0.7 new]留言框占位提示文字
+      });
+  </script>
 </article>
 
 
@@ -244,6 +259,4 @@
 
 <!-- Disqus Comments -->
 
-
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 

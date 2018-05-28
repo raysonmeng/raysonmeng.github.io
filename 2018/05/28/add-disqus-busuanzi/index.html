@@ -6,17 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="访问计数（不蒜子)  参考 http://ibruce.info/2015/04/04/busuanzi/   评论（Disqus）  参考">
+    <meta name="description" content="访问计数（不蒜子)  参考 http://ibruce.info/2015/04/04/busuanzi/   评论（Valine）  参考 https://ioliu.cn/2017/add-valine-comments-to-your-blog/">
 <meta property="og:type" content="article">
 <meta property="og:title" content="添加访问计数和评论功能">
 <meta property="og:url" content="https://raysonmeng.github.io.com/2018/05/28/add-disqus-busuanzi/index.html">
 <meta property="og:site_name" content="航海日志">
-<meta property="og:description" content="访问计数（不蒜子)  参考 http://ibruce.info/2015/04/04/busuanzi/   评论（Disqus）  参考">
+<meta property="og:description" content="访问计数（不蒜子)  参考 http://ibruce.info/2015/04/04/busuanzi/   评论（Valine）  参考 https://ioliu.cn/2017/add-valine-comments-to-your-blog/">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-28T13:47:40.354Z">
+<meta property="og:updated_time" content="2018-05-28T14:04:48.416Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="添加访问计数和评论功能">
-<meta name="twitter:description" content="访问计数（不蒜子)  参考 http://ibruce.info/2015/04/04/busuanzi/   评论（Disqus）  参考">
+<meta name="twitter:description" content="访问计数（不蒜子)  参考 http://ibruce.info/2015/04/04/busuanzi/   评论（Valine）  参考 https://ioliu.cn/2017/add-valine-comments-to-your-blog/">
     
     
         
@@ -110,8 +110,10 @@
         
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header>
+
     <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
     <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+
     
     <h1 class="posttitle" itemprop="name headline">
         添加访问计数和评论功能
@@ -142,15 +144,28 @@
 <p>参考 <a href="http://ibruce.info/2015/04/04/busuanzi/" target="_blank" rel="noopener">http://ibruce.info/2015/04/04/busuanzi/</a></p>
 </blockquote>
 </li>
-<li><p>评论（<a href="https://disqus.com/" target="_blank" rel="noopener">Disqus</a>）</p>
+<li><p>评论（<a href="https://valine.js.org/" target="_blank" rel="noopener">Valine</a>）</p>
 <blockquote>
-<p>参考 </p>
+<p>参考 <a href="https://ioliu.cn/2017/add-valine-comments-to-your-blog/" target="_blank" rel="noopener">https://ioliu.cn/2017/add-valine-comments-to-your-blog/</a></p>
 </blockquote>
 </li>
 </ol>
 
   </div>
-  <div id="comment"></div>
+
+  <div class="comment"></div>
+  <script>
+      new Valine({
+          // AV 对象来自上面引入av-min.js(老司机们不要开车➳♡゛扎心了老铁)
+          av: AV, 
+          el: '.comment', // 
+          notify: true, // 邮件提醒!!!
+          verify: true, // 验证码
+          app_id: 'olUA8FeuzQ669s3yMoep1gxp-gzGzoHsz', // 这里填写上面得到的APP ID
+          app_key: 'HQ7adeotKd6scuo3AbfI7Ka0', // 这里填写上面得到的APP KEY
+          placeholder: 'Welcome here.' // [v1.0.7 new]留言框占位提示文字
+      });
+  </script>
 </article>
 
 
@@ -245,6 +260,4 @@
 
 <!-- Disqus Comments -->
 
-
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 

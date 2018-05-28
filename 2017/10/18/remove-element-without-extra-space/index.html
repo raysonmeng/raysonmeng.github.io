@@ -112,8 +112,10 @@
         
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header>
+
     <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
     <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+
     
     <h1 class="posttitle" itemprop="name headline">
         不使用额外内存时在列表中删除指定元素
@@ -149,7 +151,20 @@
 <h2 id="Finally"><a href="#Finally" class="headerlink" title="Finally"></a>Finally</h2><p><strong>问题中声明不让为一个新的列表创建新的内存空间，也就是不让创建一个新的列表，但是没限制不可以创建一个新的变量，那么我们就可以创建一个新的变量用来记录删除元素的次数，因为再循环列表时直接删除元素，会导致列表长度发生改变，导致最后发生错误，但是增加一个变量记录删除元素的次数的话就可以知道删除几次了，再删除的时候就可以把长度补回来，也就不会出现 out of range 的错误了</strong></p>
 
   </div>
-  <div id="comment"></div>
+
+  <div class="comment"></div>
+  <script>
+      new Valine({
+          // AV 对象来自上面引入av-min.js(老司机们不要开车➳♡゛扎心了老铁)
+          av: AV, 
+          el: '.comment', // 
+          notify: true, // 邮件提醒!!!
+          verify: true, // 验证码
+          app_id: 'olUA8FeuzQ669s3yMoep1gxp-gzGzoHsz', // 这里填写上面得到的APP ID
+          app_key: 'HQ7adeotKd6scuo3AbfI7Ka0', // 这里填写上面得到的APP KEY
+          placeholder: 'Welcome here.' // [v1.0.7 new]留言框占位提示文字
+      });
+  </script>
 </article>
 
 
@@ -244,6 +259,4 @@
 
 <!-- Disqus Comments -->
 
-
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
