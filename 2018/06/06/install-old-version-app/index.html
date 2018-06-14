@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="1. 安装带有 App 管理功能的 iTunes 新版本的 Itunes 已经移除了下载 iOS App 的功能  好在苹果良心，在官网中保留了带 app 安装功能的 Itunes 的下载，需要我们手动下载安装 Download URL：https://support.apple.com/zh-cn/HT208079 安装 旧版 iTunes 后，连接手机就可以看到下图  2. 下载安装 Char">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用 Mac 安装旧版本 iOS 应用（一）">
+<meta property="og:url" content="https://raysonmeng.github.io.com/2018/06/06/install-old-version-app/index.html">
+<meta property="og:site_name" content="航海日志">
+<meta property="og:description" content="1. 安装带有 App 管理功能的 iTunes 新版本的 Itunes 已经移除了下载 iOS App 的功能  好在苹果良心，在官网中保留了带 app 安装功能的 Itunes 的下载，需要我们手动下载安装 Download URL：https://support.apple.com/zh-cn/HT208079 安装 旧版 iTunes 后，连接手机就可以看到下图  2. 下载安装 Char">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tKfTcly1fs721sbbwrj31kw0xf7wh.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcly1fs726rhw2fj31kw11xdt5.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tKfTcly1fs72al2wonj30tq0gy792.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcly1fs72cxpc0kj31kw1477cd.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcly1fs72erike8j30vc0o0tfa.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tKfTcly1fs7bzbe1sxj31du140n9p.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcly1fs7c1lmziaj31ds12kwn8.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcly1fsb2s82q6sj31fq12m7cz.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcly1fsb36beovaj31fw12q45r.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcly1fsb3dmxiujj31g012wahn.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcly1fsb3ef2okij31g012wqc8.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tKfTcly1fsb539vmygj31840ww1kx.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcly1fsb3nixn3uj31im1tg4od.jpg">
+<meta property="og:updated_time" content="2018-06-14T15:55:53.545Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="使用 Mac 安装旧版本 iOS 应用（一）">
+<meta name="twitter:description" content="1. 安装带有 App 管理功能的 iTunes 新版本的 Itunes 已经移除了下载 iOS App 的功能  好在苹果良心，在官网中保留了带 app 安装功能的 Itunes 的下载，需要我们手动下载安装 Download URL：https://support.apple.com/zh-cn/HT208079 安装 旧版 iTunes 后，连接手机就可以看到下图  2. 下载安装 Char">
+<meta name="twitter:image" content="https://ws4.sinaimg.cn/large/006tKfTcly1fs721sbbwrj31kw0xf7wh.jpg">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>使用 Mac 安装旧版本 iOS 应用（一）</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Main</a></li>
+         
+          <li><a href="/categories/memo/">Memo</a></li>
+         
+          <li><a href="/categories/leetcode/">Leetcode</a></li>
+         
+          <li><a href="/resume/">Resume</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2018/06/14/merge-two-binary-tree/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/2018/05/28/add-disqus-busuanzi/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://raysonmeng.github.io.com/2018/06/06/install-old-version-app/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://raysonmeng.github.io.com/2018/06/06/install-old-version-app/&text=使用 Mac 安装旧版本 iOS 应用（一）"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://raysonmeng.github.io.com/2018/06/06/install-old-version-app/&title=使用 Mac 安装旧版本 iOS 应用（一）"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://raysonmeng.github.io.com/2018/06/06/install-old-version-app/&is_video=false&description=使用 Mac 安装旧版本 iOS 应用（一）"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=使用 Mac 安装旧版本 iOS 应用（一）&body=Check out this article: https://raysonmeng.github.io.com/2018/06/06/install-old-version-app/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://raysonmeng.github.io.com/2018/06/06/install-old-version-app/&title=使用 Mac 安装旧版本 iOS 应用（一）"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://raysonmeng.github.io.com/2018/06/06/install-old-version-app/&title=使用 Mac 安装旧版本 iOS 应用（一）"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://raysonmeng.github.io.com/2018/06/06/install-old-version-app/&title=使用 Mac 安装旧版本 iOS 应用（一）"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://raysonmeng.github.io.com/2018/06/06/install-old-version-app/&title=使用 Mac 安装旧版本 iOS 应用（一）"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://raysonmeng.github.io.com/2018/06/06/install-old-version-app/&name=使用 Mac 安装旧版本 iOS 应用（一）&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-安装带有-App-管理功能的-iTunes"><span class="toc-number">1.</span> <span class="toc-text">1. 安装带有 App 管理功能的 iTunes</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-下载安装-Charles"><span class="toc-number">2.</span> <span class="toc-text">2. 下载安装 Charles</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-配置-Charles"><span class="toc-number">3.</span> <span class="toc-text">3. 配置 Charles</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-打开-Charles-第一步先安装证书"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 打开 Charles 第一步先安装证书</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-配置代理地址"><span class="toc-number">3.2.</span> <span class="toc-text">3.2  配置代理地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-开启-Charles-代理"><span class="toc-number">3.3.</span> <span class="toc-text">3.3 开启 Charles 代理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-验证是否开启"><span class="toc-number">3.4.</span> <span class="toc-text">3.4 验证是否开启</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-在-iTunes-中搜索并下载你要安装的-App"><span class="toc-number">4.</span> <span class="toc-text">4. 在 iTunes 中搜索并下载你要安装的 App</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-在-iTunes-中选择资料库，删除你刚才下载的-App"><span class="toc-number">5.</span> <span class="toc-text">5. 在 iTunes 中选择资料库，删除你刚才下载的 App</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-重新搜索并且下载你要下载的-App-【Step-Two】"><span class="toc-number">6.</span> <span class="toc-text">6. 重新搜索并且下载你要下载的 App 【Step Two】</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-再次重新下载-App"><span class="toc-number">7.</span> <span class="toc-text">7. 再次重新下载 App</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-等待下载完成"><span class="toc-number">8.</span> <span class="toc-text">8. 等待下载完成</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+
+    
+    <h1 class="posttitle" itemprop="name headline">
+        使用 Mac 安装旧版本 iOS 应用（一）
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">航海日志</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2018-06-06T07:49:24.000Z" itemprop="datePublished">2018-06-06</time>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="1-安装带有-App-管理功能的-iTunes"><a href="#1-安装带有-App-管理功能的-iTunes" class="headerlink" title="1. 安装带有 App 管理功能的 iTunes"></a>1. 安装带有 App 管理功能的 iTunes</h2><blockquote>
+<p>新版本的 Itunes 已经移除了下载 iOS App 的功能</p>
+</blockquote>
+<p>好在苹果良心，在官网中保留了带 app 安装功能的 Itunes 的下载，需要我们手动下载安装</p>
+<p>Download URL：<a href="https://support.apple.com/zh-cn/HT208079" target="_blank" rel="noopener">https://support.apple.com/zh-cn/HT208079</a></p>
+<p>安装 旧版 iTunes 后，连接手机就可以看到下图</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1fs721sbbwrj31kw0xf7wh.jpg" alt=""></p>
+<h2 id="2-下载安装-Charles"><a href="#2-下载安装-Charles" class="headerlink" title="2. 下载安装 Charles"></a>2. 下载安装 <a href="https://www.zzzmode.com/mytools/charles/" target="_blank" rel="noopener">Charles</a></h2><h2 id="3-配置-Charles"><a href="#3-配置-Charles" class="headerlink" title="3. 配置 Charles"></a>3. 配置 Charles</h2><h3 id="3-1-打开-Charles-第一步先安装证书"><a href="#3-1-打开-Charles-第一步先安装证书" class="headerlink" title="3.1 打开 Charles 第一步先安装证书"></a>3.1 打开 Charles 第一步先安装证书</h3><ol>
+<li><img src="https://ws1.sinaimg.cn/large/006tKfTcly1fs726rhw2fj31kw11xdt5.jpg" alt=""></li>
+<li>点击添加 <img src="https://ws4.sinaimg.cn/large/006tKfTcly1fs72al2wonj30tq0gy792.jpg" alt=""></li>
+<li>搜索证书名字关键字，找到刚刚安装的证书<img src="https://ws1.sinaimg.cn/large/006tKfTcly1fs72cxpc0kj31kw1477cd.jpg" alt=""></li>
+<li>设置证书为始终信任，设置后关闭此窗口提示输入密码保存设置<img src="https://ws2.sinaimg.cn/large/006tKfTcly1fs72erike8j30vc0o0tfa.jpg" alt="image-20180611111215231"></li>
+</ol>
+<h3 id="3-2-配置代理地址"><a href="#3-2-配置代理地址" class="headerlink" title="3.2  配置代理地址"></a>3.2  配置代理地址</h3><p>确认【系统偏好设置 —&gt; 网络 —&gt; 高级 —&gt; 代理】中勾选了【网页代理】【安全网页代理】并且不能勾选【自动代理配置】，其端口应和 Charles  【Proxy —&gt; Proxy Settings】中设置的端口一致</p>
+<h3 id="3-3-开启-Charles-代理"><a href="#3-3-开启-Charles-代理" class="headerlink" title="3.3 开启 Charles 代理"></a>3.3 开启 Charles 代理</h3><p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1fs7bzbe1sxj31du140n9p.jpg" alt=""></p>
+<h3 id="3-4-验证是否开启"><a href="#3-4-验证是否开启" class="headerlink" title="3.4 验证是否开启"></a>3.4 验证是否开启</h3><p>勾选了【macOS Proxy】后，点击【Proxy —&gt;Start Recording】就可以看到左侧边栏中会有一堆网络请求出现。<br><img src="https://ws2.sinaimg.cn/large/006tKfTcly1fs7c1lmziaj31ds12kwn8.jpg" alt=""></p>
+<h2 id="4-在-iTunes-中搜索并下载你要安装的-App"><a href="#4-在-iTunes-中搜索并下载你要安装的-App" class="headerlink" title="4. 在 iTunes 中搜索并下载你要安装的 App"></a>4. 在 iTunes 中搜索并下载你要安装的 App</h2><blockquote>
+<p>这次下载只是为了找到给加断点的请求，我以 Step Two 为例，因为这货欺负我手机系统版本不是最新的 iOS 11.4，但是这个两步验证工具颜值真的高，不安上不死心，所以就有了这个教程。</p>
+</blockquote>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1fsb2s82q6sj31fq12m7cz.jpg" alt="image-20180614222727286"></p>
+<p>点击下载后iTunes 会自动开始下载App，同时 Charles 中会出现这个 <a href="https://xxx-buy.itunes.apple.com" target="_blank" rel="noopener">https://xxx-buy.itunes.apple.com</a>(xxx不绝对是 p36)</p>
+<p>在这个请求上点右键</p>
+<ol>
+<li>选择【Focus】只看这一个请求，更清晰，减少干扰</li>
+<li>再选择【Enable SSL Proxying】对 HTTPS 解析</li>
+<li>再选择【Breakpoints】增加断点</li>
+<li>OK，都设置完是下面这样。</li>
+</ol>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1fsb36beovaj31fw12q45r.jpg" alt=""></p>
+<h2 id="5-在-iTunes-中选择资料库，删除你刚才下载的-App"><a href="#5-在-iTunes-中选择资料库，删除你刚才下载的-App" class="headerlink" title="5. 在 iTunes 中选择资料库，删除你刚才下载的 App"></a>5. 在 iTunes 中选择资料库，删除你刚才下载的 App</h2><h2 id="6-重新搜索并且下载你要下载的-App-【Step-Two】"><a href="#6-重新搜索并且下载你要下载的-App-【Step-Two】" class="headerlink" title="6. 重新搜索并且下载你要下载的 App 【Step Two】"></a>6. 重新搜索并且下载你要下载的 App 【Step Two】</h2><p>由于设置了断点，Charles 中会弹出被断点拦住的请求，这是第一次弹出来，我们直接点【Execute】。</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1fsb3dmxiujj31g012wahn.jpg" alt=""></p>
+<p>然后会再次拦截到这次请求的返回值，在这个返回值中，点击上面的【Edit Response】再选择下面的【XML Text】然后在这个返回值里面找<code>softwareVersionExternalLdentitiers</code>就是红框的部分，下面的数字就是这个App现在可下载的 几个版本的 id，从上到下是从老版本到新版本。把这些 id 记录下来，后面会用到。然后点击下面的【Abort】终止这次请求。</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcly1fsb3ef2okij31g012wqc8.jpg" alt=""></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">integer</span>&gt;</span>823853053<span class="tag">&lt;/<span class="name">integer</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">integer</span>&gt;</span>826620772<span class="tag">&lt;/<span class="name">integer</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">integer</span>&gt;</span>826685430<span class="tag">&lt;/<span class="name">integer</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">integer</span>&gt;</span>826753301<span class="tag">&lt;/<span class="name">integer</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">integer</span>&gt;</span>827095919<span class="tag">&lt;/<span class="name">integer</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">integer</span>&gt;</span>827198733<span class="tag">&lt;/<span class="name">integer</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">integer</span>&gt;</span>827266239<span class="tag">&lt;/<span class="name">integer</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">integer</span>&gt;</span>827311430<span class="tag">&lt;/<span class="name">integer</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">integer</span>&gt;</span>827330018<span class="tag">&lt;/<span class="name">integer</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>现在就拿到了这个 App 的所有历史版本id</p>
+<h2 id="7-再次重新下载-App"><a href="#7-再次重新下载-App" class="headerlink" title="7. 再次重新下载 App"></a>7. 再次重新下载 App</h2><p>在 Charles 中会再次弹出请求，这时候我们就修改这个请求，让他去下载老版本的 App。</p>
+<ol>
+<li>点击【Edit Request】</li>
+<li>选择【XML Text】</li>
+<li>将【appExtVrsId】下面的值修改为你想下载的版本 id，我们这里先尝试下倒数第二个版本，也就是上一个版本的【Step Two】是不是强制要求 iOS 11.3.4 才能安装，所以就把这里修改为【827311430】</li>
+<li>点那个红色的六边形按钮取消掉断点</li>
+<li>【Execute】释放请求</li>
+</ol>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1fsb539vmygj31840ww1kx.jpg" alt=""></p>
+<h2 id="8-等待下载完成"><a href="#8-等待下载完成" class="headerlink" title="8. 等待下载完成"></a>8. 等待下载完成</h2><p>下载完成后如果你看到你的 iTunes 里面的下载按钮变成了【Update】按钮，那个么恭喜你👏👏👏，成功了。</p>
+<p>这时候就可以去【资料库】中看到下载下来的旧版本 App 了。在 App 上点击右键，选择在 Finder 中显示，就找到下载下来的【ipa】文件了。</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1fsb3nixn3uj31im1tg4od.jpg" alt="image-20180614225732376"></p>
+
+  </div>
+
+  <div class="comment"></div>
+  <script>
+      new Valine({
+          // AV 对象来自上面引入av-min.js(老司机们不要开车➳♡゛扎心了老铁)
+          av: AV, 
+          el: '.comment', // 
+          notify: true, // 邮件提醒!!!
+          verify: true, // 验证码
+          app_id: 'olUA8FeuzQ669s3yMoep1gxp-gzGzoHsz', // 这里填写上面得到的APP ID
+          app_key: 'HQ7adeotKd6scuo3AbfI7Ka0', // 这里填写上面得到的APP KEY
+          placeholder: 'Welcome here.' // [v1.0.7 new]留言框占位提示文字
+      });
+  </script>
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Main</a></li>
+         
+          <li><a href="/categories/memo/">Memo</a></li>
+         
+          <li><a href="/categories/leetcode/">Leetcode</a></li>
+         
+          <li><a href="/resume/">Resume</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-安装带有-App-管理功能的-iTunes"><span class="toc-number">1.</span> <span class="toc-text">1. 安装带有 App 管理功能的 iTunes</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-下载安装-Charles"><span class="toc-number">2.</span> <span class="toc-text">2. 下载安装 Charles</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-配置-Charles"><span class="toc-number">3.</span> <span class="toc-text">3. 配置 Charles</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-打开-Charles-第一步先安装证书"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 打开 Charles 第一步先安装证书</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-配置代理地址"><span class="toc-number">3.2.</span> <span class="toc-text">3.2  配置代理地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-开启-Charles-代理"><span class="toc-number">3.3.</span> <span class="toc-text">3.3 开启 Charles 代理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-验证是否开启"><span class="toc-number">3.4.</span> <span class="toc-text">3.4 验证是否开启</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-在-iTunes-中搜索并下载你要安装的-App"><span class="toc-number">4.</span> <span class="toc-text">4. 在 iTunes 中搜索并下载你要安装的 App</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-在-iTunes-中选择资料库，删除你刚才下载的-App"><span class="toc-number">5.</span> <span class="toc-text">5. 在 iTunes 中选择资料库，删除你刚才下载的 App</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-重新搜索并且下载你要下载的-App-【Step-Two】"><span class="toc-number">6.</span> <span class="toc-text">6. 重新搜索并且下载你要下载的 App 【Step Two】</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-再次重新下载-App"><span class="toc-number">7.</span> <span class="toc-text">7. 再次重新下载 App</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-等待下载完成"><span class="toc-number">8.</span> <span class="toc-text">8. 等待下载完成</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://raysonmeng.github.io.com/2018/06/06/install-old-version-app/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://raysonmeng.github.io.com/2018/06/06/install-old-version-app/&text=使用 Mac 安装旧版本 iOS 应用（一）"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://raysonmeng.github.io.com/2018/06/06/install-old-version-app/&title=使用 Mac 安装旧版本 iOS 应用（一）"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://raysonmeng.github.io.com/2018/06/06/install-old-version-app/&is_video=false&description=使用 Mac 安装旧版本 iOS 应用（一）"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=使用 Mac 安装旧版本 iOS 应用（一）&body=Check out this article: https://raysonmeng.github.io.com/2018/06/06/install-old-version-app/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://raysonmeng.github.io.com/2018/06/06/install-old-version-app/&title=使用 Mac 安装旧版本 iOS 应用（一）"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://raysonmeng.github.io.com/2018/06/06/install-old-version-app/&title=使用 Mac 安装旧版本 iOS 应用（一）"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://raysonmeng.github.io.com/2018/06/06/install-old-version-app/&title=使用 Mac 安装旧版本 iOS 应用（一）"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://raysonmeng.github.io.com/2018/06/06/install-old-version-app/&title=使用 Mac 安装旧版本 iOS 应用（一）"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://raysonmeng.github.io.com/2018/06/06/install-old-version-app/&name=使用 Mac 安装旧版本 iOS 应用（一）&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2018 Rayson Meng
+  </div>
+  <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>  
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Main</a></li>
+         
+          <li><a href="/categories/memo/">Memo</a></li>
+         
+          <li><a href="/categories/leetcode/">Leetcode</a></li>
+         
+          <li><a href="/resume/">Resume</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
