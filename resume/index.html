@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="航海日志">
 <meta property="og:description" content="个人信息 毕业院校：哈尔滨理工大学(2013.09 - 2017.07) 邮箱：rayson951005@gmail.com GitHub：RaysonMeng 期望工作地点：北京   工作经历一土（北京）网络科技有限公司（在职）【一土时空】是一土学校内部老师及家长使用的一款APP，用来记录学生的每一条成长及教学记录，同时也包含学生管理等功能。 Python 开发2017.07 — 至今主要工作内">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-06-14T16:16:02.368Z">
+<meta property="og:updated_time" content="2018-06-19T14:23:37.477Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="resume">
 <meta name="twitter:description" content="个人信息 毕业院校：哈尔滨理工大学(2013.09 - 2017.07) 邮箱：rayson951005@gmail.com GitHub：RaysonMeng 期望工作地点：北京   工作经历一土（北京）网络科技有限公司（在职）【一土时空】是一土学校内部老师及家长使用的一款APP，用来记录学生的每一条成长及教学记录，同时也包含学生管理等功能。 Python 开发2017.07 — 至今主要工作内">
@@ -101,22 +101,30 @@
 <h4 id="Python-开发"><a href="#Python-开发" class="headerlink" title="Python 开发"></a>Python 开发</h4><h6 id="2017-07-—-至今"><a href="#2017-07-—-至今" class="headerlink" title="2017.07 — 至今"></a>2017.07 — 至今</h6><h5 id="主要工作内容及经历"><a href="#主要工作内容及经历" class="headerlink" title="主要工作内容及经历"></a>主要工作内容及经历</h5><p>晨犀老师版及家长版相关后台微服务API接口开发</p>
 <blockquote>
 <p>晨犀（原一土时空）是一款基于线下学校的家校沟通 App</p>
-<p>主要包含【行为记录】【课程表】【试听课】【测评】【请假处理】【班组管理】等功能</p>
+<p>主要包含【行为记录】【课程表】【试听课】【测评】【报告】【请假处理】【班组管理】等功能</p>
 </blockquote>
 <ol start="0">
-<li>开发了供内部使用的假接口服务（新接口未完成不能访问时临时返回约定好的数据结构以保证客户端开发的顺利进行）。</li>
-<li>基于 Django 及 Django REST framework 框架开发了【请假】【用户数据组合】【假期】【请假】【收藏】【评论】【点赞】相关微服务。</li>
-<li>基于 Flask 框架及 SQLAlchemy 开发了【测评】【食谱】【课程表】【测评报告】【题库】【知识体系】等相关微服务。</li>
-<li>在从 Django框架 （Python2）迁移到 Flask框架（Python3）时，解决了 supervisor 及 mysql-python 无法在 Python3 下运行的问题，将其替换为 Circus  和 pymysql ，重新定制了Dockerfile 和相关配置文件。</li>
-<li>在对 web 框架比较熟悉的情况后，先在代码规范的情况下快速的完成业务功能，再对其进行性能优化，争取性能最优。</li>
+<li>基于 Django 及 Django REST framework 框架和 Flask 框架及 SQLAlchemy 开发了【请假】【收藏】【评论】【点赞】【测评】【报告中心】【题库】等微服务的 RESTful 风格的接口。</li>
+<li>在从 Django框架 （Python2）迁移到 Flask框架（Python3）时，解决了 supervisor 及 mysql-python 无法在 Python3 下运行的问题，重新定制了 Dockerfile 和相关配置文件。</li>
+<li>实现基于 celery 框架以及 RabbitMQ 的异步操作以及 celery beat 的定时任务操作。</li>
+<li>基于 Redis 数据库实现了数据库对象的缓存以优化耗时的数据库对象查询。</li>
+<li>基于 pyspider 框架实现了豆瓣电影以及票牛网相关的活动抓取。</li>
+<li>日常项目优化<ol>
+<li>对接口性能进行优化，减少不必要的字段返回。</li>
+<li>优化代码逻辑，减少数据库查询。</li>
+<li>数据库优化表结构，增加索引。</li>
+<li>增加缓存。</li>
+</ol>
+</li>
 </ol>
 <h5 id="成长和收获"><a href="#成长和收获" class="headerlink" title="成长和收获"></a>成长和收获</h5><p>深入了解了微服务相关的开发，熟练掌握了 Python 主流 web 框架及 ORM ，业务理解能力得到了很大的提高，并且养成了良好的代码风格和 Code Review 的习惯。</p>
 <h5 id="技术栈"><a href="#技术栈" class="headerlink" title="技术栈"></a>技术栈</h5><p>Flask | SQLAlchemy | Django | Django REST framework | MySQL</p>
 <hr>
 <h3 id="北京科浪扑科技发展有限公司（实习）"><a href="#北京科浪扑科技发展有限公司（实习）" class="headerlink" title="北京科浪扑科技发展有限公司（实习）"></a>北京科浪扑科技发展有限公司（实习）</h3><h4 id="Python-开发-1"><a href="#Python-开发-1" class="headerlink" title="Python 开发"></a>Python 开发</h4><h6 id="2016-11-—-2017-04"><a href="#2016-11-—-2017-04" class="headerlink" title="2016.11 — 2017.04"></a>2016.11 — 2017.04</h6><h5 id="工作内容"><a href="#工作内容" class="headerlink" title="工作内容"></a>工作内容</h5><ol start="0">
-<li>负责内部使用的 API 数据录入功能</li>
-<li>负责搜索接口的 API 的封装</li>
-<li>实现基本数据库 CRUD 对应的 API 接口，数据验证，数据导出（下载）功能，并完成基本的单元测试及多线程并发的性能测试</li>
+<li>负责内部使用的 API 数据录入功能，将机械化的工作代码化</li>
+<li>负责 ES 搜索接口的 RESTful 风格的 API 的封装</li>
+<li>实现基本增删改查接口，数据验证，数据下载功能</li>
+<li>完成基本的单元测试及多线程并发的性能测试</li>
 <li>编写 docker-compose</li>
 <li>服务器环境部署（uWSGI，Nginx）</li>
 </ol>
@@ -135,7 +143,7 @@
 <p>我的优势：有良好的沟通能力以更好地了解业务需求，热爱技术，乐于学习和了解各种语言和框架，例如当下比较火的Golang，遇到问题不过分依赖其他人，能够主动独立的解决，哪怕查穿 Google 翻遍官方文档和 Stack Overflow 或者到 GitHub 上提 issue。除了国内的一些技术大牛，每天也通过 Twitter，Github Trending，Reddit 等主动了解最新的技术，保持视野开阔。</p>
 <p>我的劣势：算法相关不是很熟练，目前是通过经常刷 leetcode，仔细理解优质回答来进行提高。</p>
 <hr>
-<h2 id="个人项目"><a href="#个人项目" class="headerlink" title="个人项目"></a>个人项目</h2><h3 id="免费Shadowsocks账号分享-独立开发"><a href="#免费Shadowsocks账号分享-独立开发" class="headerlink" title="免费Shadowsocks账号分享 | 独立开发"></a>免费Shadowsocks账号分享 | 独立开发</h3><p>通过爬虫，获取网络上公开的SS，SSR账号，使用 Flask 配合一个 JS 的二维码渲染库的将二维码展示出来，以供公开使用</p>
+<h2 id="个人项目"><a href="#个人项目" class="headerlink" title="个人项目"></a>个人项目</h2><h3 id="免费Shadowsocks账号分享"><a href="#免费Shadowsocks账号分享" class="headerlink" title="免费Shadowsocks账号分享"></a>免费Shadowsocks账号分享</h3><p>通过爬虫，获取网络上公开的SS，SSR账号，使用 Flask 配合一个 JS 的二维码渲染库的将二维码展示出来，以供公开使用</p>
 <h4 id="技术栈-2"><a href="#技术栈-2" class="headerlink" title="技术栈"></a>技术栈</h4><p>Flask | Redis | MySQL | Docker | uWSGI | Nginx</p>
 <h4 id="实现功能"><a href="#实现功能" class="headerlink" title="实现功能"></a>实现功能</h4><ul>
 <li>多爬虫多线程同时爬取不同的网站</li>
@@ -144,6 +152,9 @@
 <li>使用Redis记录爬取到的账号，实时更新</li>
 <li>测试爬取到的账号速度，质量，并进行评分</li>
 </ul>
+<h3 id="鳄鱼词典"><a href="#鳄鱼词典" class="headerlink" title="鳄鱼词典"></a>鳄鱼词典</h3><p><strong>User Story：</strong>女朋友俄语系，日常有很大的查单词需求，可是一个非常好用的查单词的 APP 只在 Android 系统有 APP，没有 iOS 端，所以写了一个小 iOS APP 来给她查单词用</p>
+<p><strong>实现：</strong>通过 Charles 抓包，找到了安卓端 APP 请求的 API，顺藤摸瓜找到了 web 页面，找到了请求地址。接口实现了自动判断是句子还是单词，句子的话调用 Google 的翻译接口，单词的话调用了之前抓到的请求接口。并且句子的话会把每个词切割处理啊，同时多线程发请求来调用单词接口，再将每个词的翻译查出来</p>
+<p><strong>结果：</strong>🤦‍然而最后并没有使用我自己写的 API，而是直接将接口的返回值嵌入了 webview。</p>
 <hr>
 <h2 id="技能清单"><a href="#技能清单" class="headerlink" title="技能清单"></a>技能清单</h2><blockquote>
 <p>以下技能中的子项<strong>按熟练程度排列</strong></p>
@@ -189,7 +200,6 @@
 <li>Postman <code>or</code> Paw</li>
 <li>DB Browser</li>
 <li>SourceTree</li>
-<li>Typora</li>
 </ul>
 
   </div>
